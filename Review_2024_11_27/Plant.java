@@ -18,9 +18,13 @@ public class Plant{
     }
 
     public void setHeight(double height){
-        if(height >= 0)
+        if(height >= 0){
             this.height = height;
-        else System.out.println("Height not possible");
+        }
+        
+        else{
+            System.out.println("Height not possible");
+        }
     }
 
     public String getType(){
@@ -39,6 +43,7 @@ public class Plant{
         if(0<=waterLevel){
             this.waterLevel = waterLevel;
         }
+
         else if(waterLevel < 20){
             this.waterLevel = 20;
             System.out.println("Water level not possible!");
@@ -56,9 +61,7 @@ public class Plant{
     }
 
     public boolean needsWater(){
-        /*
-         * Kontrolliert ob die Variable waterLevel kleiner oder gleich 5 ist
-         */
+         //Kontrolliert ob die Variable waterLevel kleiner oder gleich 5 ist
         if(this.waterLevel <= 5) 
             return true;
         else

@@ -34,18 +34,18 @@ public class PlantTestDrive {
         double height1 = 4;
         double height2 = 4;
 
-        //2 Variablen werden mit dem "==" Operator verglichen
+        //2 Variablen werden mit dem "==" Operator verglichen. Die ausgabe ist true
         System.out.println(height1 == height2);
         
         Plant plant1 = new Plant(1.0, "cactus", 3);
         Plant plant2 = new Plant(1.0, "cactus", 3);
 
-        //2 Oblekte werden mit "==" verglichen. Auf der Konsole wird "false" ausgegeben
+        //2 Oblekte werden mit "==" verglichen. Auf der Konsole wird "false" ausgegeben, da in der Variable nur die Adresse des Objektes gespeichert wird
         System.out.println(plant1==plant2);
 
         plant2.setType("rose");
 
-        //Die beiden Objekte werden nun mit der equals-Methode verglichen
+        //Die beiden Objekte werden nun mit der equals-Methode verglichen. Somit werden alle Instanzvariablen
         System.out.println(plant1.getType().equals(plant2.getType()));
 
         plant2.setType("cactus");
