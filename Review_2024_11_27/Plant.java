@@ -1,14 +1,18 @@
+/*@author Lukas Dreistadt */
+
 public class Plant{
     private double height;
     private String type;
     private int waterLevel;
 
     public Plant(double height, String type, int waterLevel){
+        //Konstruktormethode für die Klasse
         this.height = height;
         this.type = type;
         this.waterLevel = waterLevel;
     }
 
+    //Getter und Setter für alle der drei Instanzvariablen
     public double getHeight(){
         return this.height;
     }
@@ -47,10 +51,14 @@ public class Plant{
     }
 
     public void water(int amount){
+        //Erhöht den Wert von waterLevel
         this.waterLevel += amount;
     }
 
     public boolean needsWater(){
+        /*
+         * Kontrolliert ob die Variable waterLevel kleiner oder gleich 5 ist
+         */
         if(this.waterLevel <= 5) 
             return true;
         else

@@ -4,6 +4,7 @@ public class PlantTestDrive {
 
 
         System.out.println(String.format(
+            //Gibt die Werte der Instanzvariablen aus
             "The plant of the type %s is %2f cm hight. The waterlevel is at %d %%.",
             testPlant.getType(),
             testPlant.getHeight(),
@@ -14,8 +15,9 @@ public class PlantTestDrive {
         testPlant.grow(3);
 
         if (testPlant.needsWater()){
+            //Wenn die Methode true zurückgibt, wird der Wert waterLevel um 20 erhöht
             testPlant.water(20);
-            System.out.println("Die Pflanze musste bewässert werden.");;
+            System.out.println("Die Pflanze musste bewässert werden.");
         }
 
         testPlant.setHeight(-3.4);
@@ -32,16 +34,18 @@ public class PlantTestDrive {
         double height1 = 4;
         double height2 = 4;
 
-        if(height1 == height2)
-            System.out.println("The heights are the same");
+        //2 Variablen werden mit dem "==" Operator verglichen
+        System.out.println(height1 == height2);
         
         Plant plant1 = new Plant(1.0, "cactus", 3);
         Plant plant2 = new Plant(1.0, "cactus", 3);
 
+        //2 Oblekte werden mit "==" verglichen. Auf der Konsole wird "false" ausgegeben
         System.out.println(plant1==plant2);
 
         plant2.setType("rose");
 
+        //Die beiden Objekte werden nun mit der equals-Methode verglichen
         System.out.println(plant1.getType().equals(plant2.getType()));
 
         plant2.setType("cactus");
