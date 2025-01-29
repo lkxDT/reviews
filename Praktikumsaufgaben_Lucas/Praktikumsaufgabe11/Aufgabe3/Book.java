@@ -2,7 +2,12 @@ public class Book {
     private String name;
 
     public Book(String name) {
-        this.name = name;
+        if(name == null || name.equals(""))
+        {
+            this.name = name;
+        } else {
+            throw new IllegalArgumentException();
+        }
     }
 
     public String getName() {
