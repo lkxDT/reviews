@@ -26,7 +26,7 @@ public class BookManager {
 
     private int getIndex(String title) {
         for (int i = 0; i < books.size(); i++) {
-            if (books.get(i).getName().equals(title)) {
+            if (books.get(i).equals(title)) {
                 return i;
             }
         }

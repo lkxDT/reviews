@@ -4,9 +4,9 @@ public class Book {
     public Book(String name) {
         if(name == null || name.equals(""))
         {
-            this.name = name;
-        } else {
             throw new IllegalArgumentException();
+        } else {
+            this.name=name;
         }
     }
 
