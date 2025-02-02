@@ -1,4 +1,5 @@
 import java.io.*;
+import java.nio.file.*;
 
 public class SaveDateToFile {
     public static void main(String[] args) {
@@ -19,9 +20,8 @@ public class SaveDateToFile {
     }
 
     public static void writeDate(String fileName, String date) {
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
-            writer.write(date);
-            writer.close();
+        try {
+            Files.writeString(Paths.get(fileName), date);
         } catch (IOException e) {
             System.out.println("An error occurred while writing the date to the file: " + e.getMessage());
         }
